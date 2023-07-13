@@ -1,11 +1,129 @@
-body{background-color: rgb(184, 248, 7);
-    height: 100vh;
-    width: 100vw;
-    display: flex; 
-align-items: center;
-justify-content: center;} 
 
-th{ background-color: aqua;
-     border: 2px solid black } 
+body {
+  padding: 0;
+  margin: 0;
+  color: black;
+  min-height: 1000px;
+  padding-top: 100px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.img-anime{ position: relative;
+  animation: apear 0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;}
+img {
+  height: auto;
+  max-width: 100%;
+}
 
-td {border: 2px solid grey;}
+.title-anime{position: relative;
+  animation: apear-left 0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+
+}
+
+.paragraph-anime{position: relative;
+  animation: apear 0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+
+}
+
+@keyframes apear{
+0%{opacity: 0; right: -100%;}
+100% {opacity: 1;right: 0;}}
+
+@keyframes apear-left{0%{opacity: 0; left: -100%;}
+100% {opacity: 1;left: 0;}}
+
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+nav ul li {
+  display: inline;
+  padding: 0 1rem;
+}
+nav ul li a {
+  color: #000;
+  padding: 0.5rem;
+}
+nav ul li.active a {
+  background-color: #333;
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+} 
+.container {
+  max-width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-fix{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  padding: 5.5rem;
+}
+.navbar {
+  background-color: #f8f8f8;
+  border-bottom:1px solid #e7e7e7;
+}
+.navbar-fix {
+  top: 0;
+}
+.green-box {
+  background-color: aquamarine;
+  overflow: hidden;
+
+}
+.yellow-box {
+  background-color: rgb(212, 250, 125);
+}
+.blue-box {
+  background-color: rgb(38, 239, 61);
+}
+.text-box {
+  background-color: #fff;
+  width: 50%;
+  padding: 0.5rem 1.5rem;
+}
+.one-col {
+  min-height: 600px;
+  margin-bottom: 2rem;
+ 
+}
+.green-box-inside {
+  display: flex;
+  align-items: center;
+  height: 185px;
+}
+.one-col,.two-cols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+@media (max-width:768px) {
+  .one-col, .two-cols {
+    display: block;
+  }
+}
