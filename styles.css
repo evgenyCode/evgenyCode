@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+/* styles.css */
+
+#carList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Kiekvieną kortelę dedam į horizontalią eilę ir judame iš kairės į dešinę */
+    padding: 20px;
+}
+
+.car {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    width: calc(30.33% - 20px); /* Naudojame 33.33%, nes 3 kortelės telpa vienoje eilutėje su tarpais tarp jų */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .car {
+        width: 100%; /* Visos kortelės užima visą ekraną vienoje eilutėje */
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: 200px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
